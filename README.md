@@ -5,6 +5,7 @@ Docker image based on:
 - PHP 7 
 - Nginx + PHP FPM
 - Supervisord
+
 ## Dependencies
 Docker. For installation instructions check https://docs.docker.com/engine/installation/
 
