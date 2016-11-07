@@ -25,5 +25,15 @@ bash shell.bash local shell
 ```bash
 bash shell.bash local deploy daemon
 ```
-This will build the base image and run the container interactively.
+This will build the base image and run the container daemonized.
 Check http://localhost:8888
+
+### Stop the container
+```bash
+bash shell.bash local stop
+```
+
+###Start the container
+```bash
+bash shell.bash local start
+```
