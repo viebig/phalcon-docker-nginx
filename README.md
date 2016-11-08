@@ -51,6 +51,7 @@ You can edit user@host configuration in shell.bash script and use the same synta
 ### Remote deploy example
 ```bash
 bash shell.bash remote deploy daemon
+```
 
 ### View remote logs
 ```bash
