@@ -66,6 +66,8 @@ if [ $1 == "remote" ]
 
     env="-e ENV_PROD=1"
 
+    mode="-it"
+
     if [ $2 == "deploy" ]
       then
         ssh -tt $host "mkdir $appname && cd $appname && sudo chmod 777 * -R"
@@ -73,6 +75,12 @@ if [ $1 == "remote" ]
         ssh -tt $host "cd $appname && docker build -t $appname ."
         ssh -tt $host "cd $appname && docker stop $appname"
         ssh -tt $host "cd $appname && docker rm $appname"
+
+        if [ $3 == "daemon" ]
+          then
+            mode="-d"
+        fi
+
         ssh -tt $host "cd $appname && $(run)"
     fi
 
