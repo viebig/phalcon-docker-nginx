@@ -2,6 +2,8 @@ FROM phusion/baseimage
 
 RUN curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
 
+RUN export LANG=C.UTF-8 && add-apt-repository ppa:ondrej/php -y
+
 RUN	\
 	apt-get update \
 	&&	apt-get -y upgrade \
